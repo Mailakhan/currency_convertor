@@ -31,18 +31,21 @@ let answer = await inquirer.prompt([
   },
 ]);
 //console.log(answer)
-let userFromCurrency = answer.from
-let userToCurrency = answer.to
+let userFromCurrency = answer.from;
+let userToCurrency = answer.to;
 
-let fromAmount = currency[userFromCurrency]
-let toAmount = currency[userToCurrency]
+let fromAmount = currency[userFromCurrency];
+let toAmount = currency[userToCurrency];
 let amount = answer.amount;
 let baseAmount = amount / fromAmount;
-let convertedAmount = baseAmount * toAmount
+let convertedAmount = baseAmount * toAmount;
 //console.log(convertedAmount)
 
-
-console.log(chalk.red.bold(`Your conversion from ${userFromCurrency} to ${userToCurrency} is ${convertedAmount}`))
+console.log(
+  chalk.red.bold(
+    `Your conversion from ${userFromCurrency} to ${userToCurrency} is ${convertedAmount}`
+  )
+);
 // console.log(fromAmount);
 // console.log(toAmount);
 // console.log(amount);
